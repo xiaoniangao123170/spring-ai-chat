@@ -1,0 +1,19 @@
+server:
+  port: 5501 # 后端端口，前端 springai-web 通过它调用
+
+spring:
+  application:
+    name: springai-server
+  ai:
+    dashscope:
+      # 阿里云百炼 API_KEY
+      api-key: ${DASHSCOPE_API_KEY:sk-replace-with-your-own-key}
+
+logging:
+  level:
+    org:
+      springframework:
+        ai:
+          chat:
+            client:
+              advisor: DEBUG # SimpleLoggerAdvisor 的日志级别
